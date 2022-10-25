@@ -131,7 +131,7 @@ RSpec.describe Team do
     expect(team.details).to eq({"total_value" => 85200000, "player_count" => 4})
   end
 
-  xit 'can have an average cost of player' do
+  it 'can have an average cost of player' do
     team = Team.new("Dodgers", "Los Angeles")
     player_1 = Player.new("Michael Palledorous" , 1000000, 36)
     player_2 = Player.new("Kenny DeNunez", 500000, 24)

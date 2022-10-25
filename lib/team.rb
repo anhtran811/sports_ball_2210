@@ -49,14 +49,14 @@ class Team
   end
 
   def average_cost_of_player
-    total_value / @roster.count
+    total_value / @roster.count(number_to_currency)
   end
 
   def players_by_last_name
-    last_names = " "
+    last_names = []
     @roster.each do |name|
       last_names << name.last_name
     end
-    last_names
+    last_names.sort.join(", ")
   end
 end
